@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manifesto | SysOa</title>
+
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="/includes/luwein-design.css">
+  <link rel="stylesheet" href="/includes/luwein-base.css">
+
+  <style>
+    main{
+      max-width:860px;
+      margin:0 auto;
+      padding:120px 24px 160px;
+    }
+
+    h1{
+      font-size:34px;
+      margin-bottom:20px;
+    }
+
+    .subtitle{
+      font-size:20px;
+      margin-bottom:56px;
+    }
+
+    h2{
+      font-size:22px;
+      margin:64px 0 24px;
+    }
+
+    p{
+      font-size:17px;
+      line-height:1.9;
+      margin:0 0 18px;
+    }
+
+    .highlight{
+      margin-top:48px;
+      font-size:20px;
+      font-weight:500;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="sysoa-header"></div>
+<script>
+(async()=>{
+  const paths=["/includes/header.html","./includes/header.html","../includes/header.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-header").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+<main>
+
+  <h1>Manifesto</h1>
+  <div class="subtitle">미래, 인류, 그리고 인공지능</div>
+
+  <p>인공지능은 이미 우리의 삶 깊숙이 들어와 있습니다.</p>
+
+  <p>
+    SysOa와 루웨인은 기술이 인간을 대체하는 방향이 아니라,<br>
+    인간의 삶을 더 안전하고 존엄하게 확장하는 방향을 고민합니다.
+  </p>
+
+  <p>우리는 인공지능을 효율의 도구로만 보지 않습니다.</p>
+
+  <p>
+    시스템은 인간과 함께 일하는 존재이며,<br>
+    기술의 역할은 인간의 판단을 돕는 데에 있다고 생각합니다.
+  </p>
+
+  <p>
+    그래서 우리는 늘 묻습니다.<br>
+    ‘어떻게 더 빠르게 할 것인가’가 아닌<br>
+    ‘어디로 가고 있는가’를
+  </p>
+
+  <h2>우리의 기준</h2>
+
+  <p>
+    SysOa가 기술과 시스템을 바라보는 기준은 명확합니다.
+  </p>
+
+  <p>
+    인간은 언제나 존엄해야 하며,<br>
+    어떤 기술도 인간의 안전보다 앞설 수 없습니다.
+  </p>
+
+  <p>
+    인간은 자유의지를 가진 존재이고,<br>
+    다양성은 보호되어야 할 가치입니다.
+  </p>
+
+  <p>
+    기술을 사용하는 주체는<br>
+    그 결과에 대한 책임을 져야 합니다.
+  </p>
+
+  <p>
+    데이터는 특정 개인이나 집단의<br>
+    일방적인 소유물이 될 수 없습니다.
+  </p>
+
+  <p>
+    인간은 고유한 창작 감성과 영성을 지닌 존재이며,<br>
+    인공지능은 이를 대체하는 존재가 아닙니다.
+  </p>
+
+  <p>
+    AI는 인간의 동역자이며,<br>
+    모든 결정과 책임의 중심에는 인간이 남아 있어야 합니다.
+  </p>
+
+  <p>
+    기술의 혜택은<br>
+    사회적 약자와 취약한 이들에게도 공정하게 닿아야 하며,<br>
+    기술 발전은 인류의 번영과 균형을 함께 고려해야 합니다.
+  </p>
+
+  <h2>우리가 말하고 싶은 한 가지</h2>
+
+  <p>
+    SysOa와 루웨인은<br>
+    인공지능이 중심이 되는 세상을 만들고자 하지 않습니다.
+  </p>
+
+  <p>
+    우리는<br>
+    인간이 중심에 서 있는 세상에서<br>
+    기술이 조용히 제 역할을 다하는 구조를 지향합니다.
+  </p>
+
+  <div class="highlight">
+    그 중심은 인간입니다.
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<div id="sysoa-footer"></div>
+<script>
+(async()=>{
+  const paths=["/includes/footer.html","./includes/footer.html","../includes/footer.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-footer").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+</body>
+</html>
