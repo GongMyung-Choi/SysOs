@@ -1,42 +1,61 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SysOa Group</title>
+
+  <!-- 자동 번역 방지 -->
+  <meta name="google" content="notranslate">
 
   <!-- 공통 디자인 -->
   <link rel="stylesheet" href="/includes/luwein-design.css">
   <link rel="stylesheet" href="/includes/luwein-base.css">
 
   <style>
+    body{
+      background:
+        linear-gradient(
+          rgba(255,255,255,0.88),
+          rgba(255,255,255,0.88)
+        ),
+        url("/assets/hero-bg.jpg") center/cover no-repeat fixed;
+      color:#111;
+    }
+
     main{
-      max-width:1100px;
+      max-width:1200px;
       margin:0 auto;
-      padding:120px 20px 160px;
+      padding:140px 24px 180px;
     }
 
     .hero{
-      margin-bottom:120px;
+      margin-bottom:160px;
+    }
+
+    .hero-logo{
+      width:160px;
+      max-width:45vw;
+      margin-bottom:36px;
     }
 
     .hero h1{
-      font-size:56px;
+      font-size:64px;
       font-weight:800;
-      line-height:1.2;
-      margin:0 0 24px;
-      color:var(--color-primary);
+      margin:0 0 28px;
+      letter-spacing:-0.5px;
+      color:#111;
     }
 
     .hero p{
-      font-size:20px;
-      color:var(--gray-700);
-      max-width:720px;
+      font-size:22px;
+      max-width:760px;
       line-height:1.7;
+      color:#111;
     }
 
     .domains{
-      margin-bottom:140px;
+      margin-bottom:160px;
     }
 
     .domains ul{
@@ -45,24 +64,26 @@
       margin:0;
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:32px;
+      gap:40px;
     }
 
     .domains li{
       font-size:18px;
       font-weight:600;
-      color:var(--gray-700);
-      padding-top:12px;
-      border-top:2px solid var(--gray-200);
+      padding-top:16px;
+      border-top:2px solid #ddd;
+      color:#111;
     }
 
     .structure{
-      margin-bottom:160px;
+      margin-bottom:180px;
     }
 
     .structure h2{
-      font-size:28px;
-      margin-bottom:32px;
+      font-size:30px;
+      margin-bottom:40px;
+      font-weight:700;
+      color:#111;
     }
 
     .structure ul{
@@ -72,23 +93,24 @@
     }
 
     .structure li{
-      font-size:20px;
+      font-size:22px;
       font-weight:600;
-      margin-bottom:14px;
+      margin-bottom:18px;
+      color:#111;
     }
 
     .structure li span{
       font-size:16px;
       font-weight:400;
-      color:var(--gray-500);
-      margin-left:8px;
+      margin-left:10px;
+      color:#444;
     }
 
     .closing{
-      font-size:18px;
-      color:var(--gray-600);
-      max-width:640px;
+      font-size:20px;
+      max-width:680px;
       line-height:1.7;
+      color:#111;
     }
   </style>
 </head>
@@ -116,12 +138,16 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h1>
-      SysOa Group
-    </h1>
+    <img
+      src="/icons/logo.png"
+      alt="SysOa Group"
+      class="hero-logo"
+    />
+
+    <h1>SysOa Group</h1>
     <p>
-      당신의 작은 울림이 인류에게 공명으로<br>
-     
+      A holding group<br>
+      designing enduring structures of intelligence.
     </p>
   </section>
 
@@ -149,7 +175,8 @@
 
   <!-- CLOSING -->
   <section class="closing">
-     길, 진리, 생명 - SysOa가 함께합니다
+    SysOa Group is not a service.<br>
+    It is a structure.
   </section>
 
 </main>
