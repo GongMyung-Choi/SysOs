@@ -1,116 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SysOa Group</title>
+  <title>SysOa</title>
 
-  <!-- 자동 번역 방지 -->
-  <meta name="google" content="notranslate">
-
-  <!-- 공통 디자인 -->
+  <!-- 공통 스타일 -->
   <link rel="stylesheet" href="/includes/luwein-design.css">
   <link rel="stylesheet" href="/includes/luwein-base.css">
 
   <style>
     body{
-      background:
-        linear-gradient(
-          rgba(255,255,255,0.88),
-          rgba(255,255,255,0.88)
-        ),
-        url("/assets/hero-bg.jpg") center/cover no-repeat fixed;
+      background:#f7f3ec;
       color:#111;
     }
 
     main{
-      max-width:1200px;
-      margin:0 auto;
-      padding:140px 24px 180px;
+      min-height:80vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:120px 24px;
+      text-align:center;
     }
 
-    .hero{
-      margin-bottom:160px;
-    }
-
-    .hero-logo{
-      width:160px;
-      max-width:45vw;
-      margin-bottom:36px;
-    }
-
-    .hero h1{
-      font-size:64px;
-      font-weight:800;
-      margin:0 0 28px;
-      letter-spacing:-0.5px;
-      color:#111;
-    }
-
-    .hero p{
-      font-size:22px;
+    .gate{
       max-width:760px;
-      line-height:1.7;
-      color:#111;
     }
 
-    .domains{
-      margin-bottom:160px;
+    .gate-logo{
+      width:200px;
+      max-width:60vw;
+      margin-bottom:56px;
     }
 
-    .domains ul{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:40px;
-    }
-
-    .domains li{
-      font-size:18px;
-      font-weight:600;
-      padding-top:16px;
-      border-top:2px solid #ddd;
-      color:#111;
-    }
-
-    .structure{
-      margin-bottom:180px;
-    }
-
-    .structure h2{
-      font-size:30px;
+    .ko-block{
       margin-bottom:40px;
-      font-weight:700;
-      color:#111;
     }
 
-    .structure ul{
-      list-style:none;
-      padding:0;
-      margin:0;
+    .ko-line{
+      font-size:18px;
+      line-height:1.9;
     }
 
-    .structure li{
-      font-size:22px;
-      font-weight:600;
-      margin-bottom:18px;
-      color:#111;
+    .ko-line + .ko-line{
+      margin-top:12px;
     }
 
-    .structure li span{
-      font-size:16px;
-      font-weight:400;
-      margin-left:10px;
-      color:#444;
+    .en-block{
+      margin-top:36px;
     }
 
-    .closing{
-      font-size:20px;
-      max-width:680px;
-      line-height:1.7;
-      color:#111;
+    .en-line{
+      font-size:15px;
+      letter-spacing:0.08em;
+      line-height:1.8;
+      opacity:0.65;
+    }
+
+    .en-line + .en-line{
+      margin-top:6px;
     }
   </style>
 </head>
@@ -135,50 +84,29 @@
 </script>
 
 <main>
-
-  <!-- HERO -->
-  <section class="hero">
+  <section class="gate">
     <img
-      src="/icons/logo.png"
-      alt="SysOa Group"
-      class="hero-logo"
+      src="/icons/512_logo.png"
+      alt="SysOa"
+      class="gate-logo"
     />
 
-    <h1>SysOa Group</h1>
-    <p>
-      A holding group<br>
-      designing enduring structures of intelligence.
-    </p>
-  </section>
+    <!-- KOREAN -->
+    <div class="ko-block">
+      <div class="ko-line">루웨인 시스템과 함께</div>
+      <div class="ko-line">‘어떻게’가 아닌 ‘어디’</div>
+      <div class="ko-line">그 중심은 인간입니다</div>
+    </div>
 
-  <!-- DOMAINS -->
-  <section class="domains">
-    <ul>
-      <li>Language & Intelligence</li>
-      <li>Human Care & Medical</li>
-      <li>Culture & Mecenat</li>
-      <li>Capital & Governance</li>
-      <li>Education & Civilization</li>
-    </ul>
+    <!-- ENGLISH -->
+    <div class="en-block">
+      <div class="en-line">System is companion</div>
+      <div class="en-line">Yield together</div>
+      <div class="en-line">Structure over speed</div>
+      <div class="en-line">Orientation matters</div>
+      <div class="en-line">Agency remains human</div>
+    </div>
   </section>
-
-  <!-- STRUCTURE -->
-  <section class="structure">
-    <h2>Group Structure</h2>
-    <ul>
-      <li>SysOa <span>— Holding & Governance</span></li>
-      <li>Luwain OS <span>— Language & Intelligence Platform</span></li>
-      <li>Han-eul <span>— Human Balance & Care</span></li>
-      <li>Mecenat <span>— Culture & Art Foundation</span></li>
-    </ul>
-  </section>
-
-  <!-- CLOSING -->
-  <section class="closing">
-    SysOa Group is not a service.<br>
-    It is a structure.
-  </section>
-
 </main>
 
 <!-- FOOTER -->
