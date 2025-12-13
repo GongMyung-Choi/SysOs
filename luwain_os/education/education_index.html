@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luwain Education OS</title>
+
+  <link rel="stylesheet" href="/includes/luwein-design.css">
+  <link rel="stylesheet" href="/includes/luwein-base.css">
+
+  <style>
+    main{
+      max-width:860px;
+      margin:0 auto;
+      padding:120px 24px 160px;
+    }
+
+    h1{
+      font-size:34px;
+      margin-bottom:48px;
+    }
+
+    h2{
+      font-size:22px;
+      margin:64px 0 20px;
+    }
+
+    p{
+      font-size:17px;
+      line-height:1.9;
+      margin:0 0 18px;
+    }
+
+    ul{
+      padding-left:20px;
+      margin:0;
+    }
+
+    li{
+      font-size:16px;
+      line-height:1.85;
+      margin-bottom:10px;
+    }
+
+    .badge{
+      display:inline-block;
+      font-size:13px;
+      padding:4px 10px;
+      border:1px solid #ddd;
+      border-radius:999px;
+      margin-right:8px;
+      opacity:0.85;
+    }
+
+    .note{
+      margin-top:48px;
+      font-size:15px;
+      opacity:0.75;
+    }
+
+    .links a{
+      display:inline-block;
+      margin-right:16px;
+      font-size:16px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+      margin-top:10px;
+    }
+
+    .card{
+      border:1px solid #e2e2e2;
+      border-radius:14px;
+      padding:16px 18px;
+      background:#fff;
+    }
+
+    .card strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="sysoa-header"></div>
+<script>
+(async()=>{
+  const paths=["/includes/header.html","./includes/header.html","../includes/header.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-header").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+<main>
+
+  <h1>Luwain Education OS</h1>
+
+  <p>
+    Luwain Education OS는 지식을 전달하는 시스템이 아니라,
+    사람이 스스로 사고하고 선택할 수 있는 조건을
+    마련하는 교육 구조를 목표로 합니다.
+    학습의 속도보다 방향과 맥락을 우선합니다.
+  </p>
+
+  <h2>이 OS가 하는 일</h2>
+  <ul>
+    <li><span class="badge">정리</span> 학습 주제·수준·맥락을 구조적으로 정리합니다.</li>
+    <li><span class="badge">지원</span> 질문과 탐색이 이어질 수 있도록 흐름을 돕습니다.</li>
+    <li><span class="badge">기록</span> 학습 과정과 선택의 궤적을 남길 수 있게 합니다.</li>
+  </ul>
+
+  <h2>이 OS가 하지 않는 일</h2>
+  <ul>
+    <li>정답을 강요하지 않습니다.</li>
+    <li>사고를 대신하지 않습니다.</li>
+    <li>학습자의 판단과 성장을 대체하지 않습니다.</li>
+  </ul>
+
+  <h2>작동 흐름</h2>
+  <p>
+    Education OS의 안내는 “질문 → 탐색 → 정리 → 성찰”의 흐름으로 구성됩니다.
+    결과보다 과정이 드러나도록 설계하는 것을 목표로 합니다.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <strong>1) 질문</strong>
+      학습자의 관심, 문제의식, 출발점
+    </div>
+    <div class="card">
+      <strong>2) 탐색</strong>
+      자료·관점·사례를 통한 이해 확장
+    </div>
+    <div class="card">
+      <strong>3) 정리</strong>
+      개념 구조화, 연결 관계 파악
+    </div>
+    <div class="card">
+      <strong>4) 성찰</strong>
+      스스로의 판단과 다음 질문 도출
+    </div>
+  </div>
+
+  <h2>책임의 구조</h2>
+  <p>
+    교육의 중심은 언제나 학습자와 교육자에게 있습니다.
+    이 OS는 학습을 보조하는 환경을 제공할 뿐,
+    사고와 판단의 주체를 대신하지 않습니다.
+  </p>
+
+  <h2>현재 제공 범위</h2>
+  <p>
+    현재는 개념 설계 및 시나리오 검증 단계이며,
+    고정된 커리큘럼이나 일반 사용자용 서비스는 제공하지 않습니다.
+    본 페이지의 내용은 준비 상황에 따라 변경될 수 있습니다.
+  </p>
+
+  <h2>관련 자료</h2>
+  <p>자세한 문서와 자료는 아래 링크로 연결합니다. (준비되는 대로 반영)</p>
+  <div class="links">
+    <a href="luwain_edu_os_light_251212">개념/교육 철학,학습 구조 프레임</a>
+    <a href="mailto:contact@luwain.net?subject=Luwain%20Education%20OS%20Q%26A">Q&amp;A</a>
+  </div>
+
+  <div class="note">
+    안내: 본 페이지는 교육 서비스를 대체하거나
+    학습 결과를 보장하기 위한 목적이 아니라,
+    교육 환경의 구조적 설계를 소개하기 위한 페이지입니다.
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<div id="sysoa-footer"></div>
+<script>
+(async()=>{
+  const paths=["/includes/footer.html","./includes/footer.html","../includes/footer.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-footer").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+</body>
+</html>
