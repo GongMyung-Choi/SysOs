@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luwain Medical OS</title>
+
+  <link rel="stylesheet" href="/includes/luwein-design.css">
+  <link rel="stylesheet" href="/includes/luwein-base.css">
+
+  <style>
+    main{
+      max-width:860px;
+      margin:0 auto;
+      padding:120px 24px 160px;
+    }
+
+    h1{
+      font-size:34px;
+      margin-bottom:48px;
+    }
+
+    h2{
+      font-size:22px;
+      margin:64px 0 20px;
+    }
+
+    p{
+      font-size:17px;
+      line-height:1.9;
+      margin:0 0 18px;
+    }
+
+    ul{
+      padding-left:20px;
+      margin:0;
+    }
+
+    li{
+      font-size:16px;
+      line-height:1.85;
+      margin-bottom:10px;
+    }
+
+    .badge{
+      display:inline-block;
+      font-size:13px;
+      padding:4px 10px;
+      border:1px solid #ddd;
+      border-radius:999px;
+      margin-right:8px;
+      opacity:0.85;
+    }
+
+    .note{
+      margin-top:48px;
+      font-size:15px;
+      opacity:0.75;
+    }
+
+    .links a{
+      display:inline-block;
+      margin-right:16px;
+      font-size:16px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+      margin-top:10px;
+    }
+
+    .card{
+      border:1px solid #e2e2e2;
+      border-radius:14px;
+      padding:16px 18px;
+      background:#fff;
+    }
+
+    .card strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="sysoa-header"></div>
+<script>
+(async()=>{
+  const paths=["/includes/header.html","./includes/header.html","../includes/header.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-header").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+<main>
+
+  <h1>Luwain Medical OS</h1>
+
+  <p>
+    Luwain Medical OS는 의료 환경에서
+    사람의 판단이 안전하게 작동하도록 돕는 구조를 목표로 합니다.
+    의료 판단을 “대신하는 시스템”이 아니라,
+    의료 행위가 성립 가능한 조건을 관리하는 방식으로 설계됩니다.
+  </p>
+
+  <h2>이 OS가 하는 일</h2>
+  <ul>
+    <li><span class="badge">판정</span> 절차·기록·조건이 충족되는지 확인하고, 상태를 명확히 표시합니다.</li>
+    <li><span class="badge">보류/재확인</span> 위험이 크거나 조건이 누락되면 재확인 또는 보류를 요구합니다.</li>
+    <li><span class="badge">기록</span> 경고·보류·재확인의 근거를 남길 수 있도록 설계합니다.</li>
+  </ul>
+
+  <h2>이 OS가 하지 않는 일</h2>
+  <ul>
+    <li>진단을 단정하지 않습니다.</li>
+    <li>처방·치료를 지시하지 않습니다.</li>
+    <li>최종 결정을 대신하지 않습니다.</li>
+  </ul>
+
+  <h2>작동 흐름</h2>
+  <p>
+    의료 OS의 안내는 “입력 → 분석 → 판단 → 해설”의 흐름으로 구성됩니다.
+    사용자의 언어 수준과 상황에 맞춰, 필요한 만큼만 제공되는 것을 목표로 합니다.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <strong>1) 입력</strong>
+      증상·기록·상황(텍스트/수치/이미지 등)
+    </div>
+    <div class="card">
+      <strong>2) 분석</strong>
+      위험 신호·누락 조건·기관 프로토콜 상의 충돌 점검
+    </div>
+    <div class="card">
+      <strong>3) 판단</strong>
+      “가능 / 조건부 / 보류 / 불가”처럼 단순한 상태로 제시
+    </div>
+    <div class="card">
+      <strong>4) 해설</strong>
+      이유 중심의 설명과 다음 단계 안내(필요 최소)
+    </div>
+  </div>
+
+  <h2>책임의 구조</h2>
+  <p>
+    의료 환경에서의 책임은 단일 주체가 아니라 역할 분담으로 성립합니다.
+    이 OS는 판단의 근거를 투명하게 남기고,
+    실제 집행과 운영의 책임 구조가 흔들리지 않도록 돕는 방향을 지향합니다.
+  </p>
+
+  <h2>현재 제공 범위</h2>
+  <p>
+    현재는 개념 설계 및 제한된 환경에서의 검증 단계이며,
+    일반인을 위한 완성된 사용 절차(앱/웹)는 고정되어 있지 않습니다.
+    본 페이지는 준비 상황에 따라 내용이 수시로 변경될 수 있습니다.
+  </p>
+
+  <h2>관련 자료</h2>
+  <p>자세한 문서와 자료는 아래 링크로 연결합니다. (준비되는 대로 반영)</p>
+  <div class="links">
+    <a href="luwain_os_medical_251212.docx">개념/헌정 구조</a>
+    <a href="Luwain Medical Operating System Act_251213.docx">운영·책임 구조</a>
+    <a href="besoullight@gmail.com">Q&amp;A</a>
+  </div>
+
+  <div class="note">
+    안내: 본 페이지는 의료 행위의 대체가 아니라,
+    의료 환경에서의 안전한 구조 설계를 목표로 하는 소개 페이지입니다.
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<div id="sysoa-footer"></div>
+<script>
+(async()=>{
+  const paths=["/includes/footer.html","./includes/footer.html","../includes/footer.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-footer").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+</body>
+</html>
