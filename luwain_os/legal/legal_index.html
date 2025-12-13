@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luwain Legal OS</title>
+
+  <link rel="stylesheet" href="/includes/luwein-design.css">
+  <link rel="stylesheet" href="/includes/luwein-base.css">
+
+  <style>
+    main{
+      max-width:860px;
+      margin:0 auto;
+      padding:120px 24px 160px;
+    }
+
+    h1{
+      font-size:34px;
+      margin-bottom:48px;
+    }
+
+    h2{
+      font-size:22px;
+      margin:64px 0 20px;
+    }
+
+    p{
+      font-size:17px;
+      line-height:1.9;
+      margin:0 0 18px;
+    }
+
+    ul{
+      padding-left:20px;
+      margin:0;
+    }
+
+    li{
+      font-size:16px;
+      line-height:1.85;
+      margin-bottom:10px;
+    }
+
+    .badge{
+      display:inline-block;
+      font-size:13px;
+      padding:4px 10px;
+      border:1px solid #ddd;
+      border-radius:999px;
+      margin-right:8px;
+      opacity:0.85;
+    }
+
+    .note{
+      margin-top:48px;
+      font-size:15px;
+      opacity:0.75;
+    }
+
+    .links a{
+      display:inline-block;
+      margin-right:16px;
+      font-size:16px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+      margin-top:10px;
+    }
+
+    .card{
+      border:1px solid #e2e2e2;
+      border-radius:14px;
+      padding:16px 18px;
+      background:#fff;
+    }
+
+    .card strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="sysoa-header"></div>
+<script>
+(async()=>{
+  const paths=["/includes/header.html","./includes/header.html","../includes/header.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-header").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+<main>
+
+  <h1>Luwain Legal OS</h1>
+
+  <p>
+    Luwain Legal OS는 법률 판단이 성립하기 위한
+    조건과 절차가 흔들리지 않도록 돕는 구조를 목표로 합니다.
+    결론을 대신 제시하기보다,
+    법적 판단이 이루어지는 과정이 명확히 유지되도록 설계됩니다.
+  </p>
+
+  <h2>이 OS가 하는 일</h2>
+  <ul>
+    <li><span class="badge">정리</span> 사실관계·쟁점·적용 범위를 구조적으로 정리합니다.</li>
+    <li><span class="badge">점검</span> 누락된 조건, 모순되는 주장, 절차상의 위험을 표시합니다.</li>
+    <li><span class="badge">기록</span> 판단의 근거와 선택 과정을 남길 수 있도록 돕습니다.</li>
+  </ul>
+
+  <h2>이 OS가 하지 않는 일</h2>
+  <ul>
+    <li>법적 결론을 단정하지 않습니다.</li>
+    <li>판결·자문을 대신하지 않습니다.</li>
+    <li>책임 주체를 대체하지 않습니다.</li>
+  </ul>
+
+  <h2>작동 흐름</h2>
+  <p>
+    Legal OS의 안내는 “입력 → 구조화 → 점검 → 해설”의 흐름으로 구성됩니다.
+    사용자의 법률 지식 수준과 상황에 따라,
+    필요한 정보만 단계적으로 제시하는 것을 목표로 합니다.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <strong>1) 입력</strong>
+      사실관계·문서·주장·쟁점
+    </div>
+    <div class="card">
+      <strong>2) 구조화</strong>
+      법률 관계, 적용 가능 범위, 쟁점 정렬
+    </div>
+    <div class="card">
+      <strong>3) 점검</strong>
+      절차상 누락, 충돌, 위험 요소 표시
+    </div>
+    <div class="card">
+      <strong>4) 해설</strong>
+      선택지별 의미와 고려사항 설명(결론 아님)
+    </div>
+  </div>
+
+  <h2>책임의 구조</h2>
+  <p>
+    법률 영역에서의 책임은 항상 인간 주체에게 귀속됩니다.
+    이 OS는 판단의 맥락과 근거를 정리할 뿐,
+    결정과 집행의 책임을 대신하지 않습니다.
+  </p>
+
+  <h2>현재 제공 범위</h2>
+  <p>
+    현재는 개념 설계 및 제한된 환경에서의 검증 단계이며,
+    일반인을 위한 완성된 서비스 형태는 고정되어 있지 않습니다.
+    본 페이지의 내용은 준비 상황에 따라 변경될 수 있습니다.
+  </p>
+
+  <h2>관련 자료</h2>
+  <p>자세한 문서와 자료는 아래 링크로 연결합니다. (준비되는 대로 반영)</p>
+  <div class="links">
+    <a href="luwain_os_legal_idea_251213.docx">개념/구조</a>
+    <a href="luwain_os_legal_251213.docx">절차·책임 프레임</a>
+    <a href="besoullight@gmail.com">Q&amp;A</a>
+  </div>
+
+  <div class="note">
+    안내: 본 페이지는 법률 자문이나 판단을 대체하지 않으며,
+    법적 판단이 이루어지는 구조와 절차를 이해하기 위한 소개 페이지입니다.
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<div id="sysoa-footer"></div>
+<script>
+(async()=>{
+  const paths=["/includes/footer.html","./includes/footer.html","../includes/footer.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-footer").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+</body>
+</html>
