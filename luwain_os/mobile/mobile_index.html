@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luwain Mobile OS</title>
+
+  <link rel="stylesheet" href="/includes/luwein-design.css">
+  <link rel="stylesheet" href="/includes/luwein-base.css">
+
+  <style>
+    main{
+      max-width:860px;
+      margin:0 auto;
+      padding:120px 24px 160px;
+    }
+
+    h1{
+      font-size:34px;
+      margin-bottom:48px;
+    }
+
+    h2{
+      font-size:22px;
+      margin:64px 0 20px;
+    }
+
+    p{
+      font-size:17px;
+      line-height:1.9;
+      margin:0 0 18px;
+    }
+
+    ul{
+      padding-left:20px;
+      margin:0;
+    }
+
+    li{
+      font-size:16px;
+      line-height:1.8;
+      margin-bottom:10px;
+    }
+
+    .note{
+      margin-top:48px;
+      font-size:15px;
+      opacity:0.75;
+    }
+
+    .links a{
+      display:inline-block;
+      margin-right:16px;
+      font-size:16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="sysoa-header"></div>
+<script>
+(async()=>{
+  const paths=["/includes/header.html","./includes/header.html","../includes/header.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-header").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+<main>
+
+  <h1>Luwain Mobile OS</h1>
+
+  <p>
+    Luwain Mobile OS는 인간의 판단과 선택을 보조하는
+    모바일 환경을 목표로 설계되고 있는 운영체계입니다.
+    효율을 앞세우기보다, 사용자의 맥락과 방향을
+    함께 고려하는 구조를 지향합니다.
+  </p>
+
+  <h2>지금 이 OS는 무엇을 하고 있나요</h2>
+
+  <p>
+    현재 Luwain Mobile OS는 개념 설계와 시나리오 검증 단계에 있으며,
+    실제 서비스 형태는 점진적으로 구체화되고 있습니다.
+  </p>
+
+  <ul>
+    <li>모바일 환경에서의 언어·판단 보조 구조 연구</li>
+    <li>사용자 맥락을 중심으로 한 인터페이스 설계</li>
+    <li>AI와 인간의 역할 분리를 전제로 한 시스템 실험</li>
+  </ul>
+
+  <h2>사용 방법에 대하여</h2>
+
+  <p>
+    현재는 일반 사용자를 위한 완성된 앱이나
+    고정된 사용 절차를 제공하지 않습니다.
+    일부 기능과 개념은 내부 테스트 또는 제한된 환경에서
+    검증되고 있습니다.
+  </p>
+
+  <h2>관련 자료</h2>
+
+  <p>
+    설계 배경과 개념에 대한 보다 자세한 내용은
+    아래 자료를 통해 확인할 수 있습니다.
+  </p>
+
+  <div class="links">
+    <a href="Luwain mobile OS Executive Concept Proposal v1.0.docx">OS 제안서</a>
+    <a href="Luwain mobile OS scenario.docx">시나리오 자료</a>
+    <a href="Mika Mobility OS_ Technical Specification v1.0.docx">기술 개요</a>
+  </div>
+
+  <div class="note">
+    본 페이지는 개발 및 연구 진행 상황에 따라
+    내용이 수시로 변경될 수 있습니다.
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<div id="sysoa-footer"></div>
+<script>
+(async()=>{
+  const paths=["/includes/footer.html","./includes/footer.html","../includes/footer.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-footer").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+</body>
+</html>
