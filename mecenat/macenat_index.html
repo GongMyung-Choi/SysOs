@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecenat</title>
+
+  <link rel="stylesheet" href="/includes/luwein-design.css">
+  <link rel="stylesheet" href="/includes/luwein-base.css">
+
+  <style>
+    main{
+      max-width:860px;
+      margin:0 auto;
+      padding:120px 24px 160px;
+    }
+
+    h1{
+      font-size:34px;
+      margin-bottom:40px;
+    }
+
+    p{
+      font-size:17px;
+      line-height:1.9;
+      margin:0 0 18px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:16px;
+      margin-top:40px;
+    }
+
+    .card{
+      border:1px solid #e2e2e2;
+      border-radius:14px;
+      padding:18px 18px;
+      background:#fff;
+    }
+
+    .card h2{
+      font-size:18px;
+      margin:0 0 10px;
+    }
+
+    .card .desc{
+      font-size:15px;
+      line-height:1.8;
+      opacity:0.85;
+      margin:0 0 14px;
+    }
+
+    .card a{
+      font-size:15px;
+    }
+
+    .tag{
+      display:inline-block;
+      font-size:12px;
+      padding:4px 10px;
+      border:1px solid #ddd;
+      border-radius:999px;
+      opacity:0.8;
+      margin-left:8px;
+    }
+
+    .note{
+      margin-top:48px;
+      font-size:15px;
+      opacity:0.75;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="sysoa-header"></div>
+<script>
+(async()=>{
+  const paths=["/includes/header.html","./includes/header.html","../includes/header.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-header").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+<main>
+
+  <h1>Mecenat</h1>
+
+  <p>
+    메세나는 성과를 “만들어내는” 일이 아니라,
+    시간이 지나도 남는 가치를 “지켜내는” 방식입니다.
+  </p>
+
+  <p>
+    SysOa Mecenat은 예술과 문화가
+    삶 속에서 지속될 수 있도록,
+    조용히 조건을 마련하는 일을 합니다.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Art <span class="tag">준비중</span></h2>
+      <p class="desc">
+        창작이 지속되기 위한 조건을 다룹니다.
+        지원은 통제나 방향 제시가 아니라, 지속의 기반을 만드는 일입니다.
+      </p>
+      <a href="/mecenat/art/">들어가기</a>
+    </div>
+
+    <div class="card">
+      <h2>Culture <span class="tag">준비중</span></h2>
+      <p class="desc">
+        공동체의 기억과 생활 문화가 이어질 수 있는
+        구조와 연결을 고민합니다.
+      </p>
+      <a href="/mecenat/culture/">들어가기</a>
+    </div>
+  </div>
+
+  <div class="note">
+    현재는 초기 단계로, 세부 내용은 준비되는 대로 순차적으로 공개됩니다.
+    문의: <a href="besoullight@gmail.com">contact@luwain.net</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<div id="sysoa-footer"></div>
+<script>
+(async()=>{
+  const paths=["/includes/footer.html","./includes/footer.html","../includes/footer.html"];
+  for(const p of paths){
+    try{
+      const r=await fetch(p,{cache:"no-cache"});
+      if(r.ok){
+        document.getElementById("sysoa-footer").innerHTML=await r.text();
+        return;
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
+</body>
+</html>
